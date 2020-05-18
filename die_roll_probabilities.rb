@@ -49,13 +49,11 @@ def roll_dice_and_check_if_a_certain_number_of_sides_were_rolled_at_least_a_cert
     total_successes >= minimum_number_for_success
 end
 
-# Rolling 12d6 420 times and seeing how many of those times 1s and 2s were rolled at least three times
-# monte_carlo_roll_dice_and_check_if_a_certain_number_of_sides_were_rolled_at_least_a_certain_number_of_times(2, 6, 12, 3, 420)
+# Rolling 12d6 666 times and seeing how many of those times 1s and 2s were rolled at least three times
+# monte_carlo_roll_dice_and_check_if_a_certain_number_of_sides_were_rolled_at_least_a_certain_number_of_times(2, 6, 12, 3, 666)
 def monte_carlo_roll_dice_and_check_if_a_certain_number_of_sides_were_rolled_at_least_a_certain_number_of_times(number_of_success_sides, total_sides, number_of_dice, minimum_number_for_success, attempts)
     proc = return_proc_from_method_and_arguments(:roll_dice_and_check_if_a_certain_number_of_sides_were_rolled_at_least_a_certain_number_of_times, number_of_success_sides, total_sides, number_of_dice, minimum_number_for_success)
     monte_carlo_a_proc_that_returns_a_boolean(proc, attempts)
 end
-
-# return_proc_from_method_and_arguments(:monte_carlo_roll_dice_and_check_if_a_certain_number_of_sides_were_rolled_at_least_a_certain_number_of_times, 2, 6, 12, 3, 420)
 
 binding.pry
